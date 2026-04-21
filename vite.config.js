@@ -1,11 +1,13 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
+import { qrcode } from 'vite-plugin-qrcode'
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
+    qrcode(),
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg'],
